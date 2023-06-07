@@ -140,12 +140,44 @@ main {
     justify-content: space-evenly;
     align-items: center;
     color: white;
-    background-color: #282A39;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    perspective: 1000px;
+
 }
 
-.phone-card::after {
+.flip-card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.phone-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+}
+
+
+.phone-card-front,
+.phone-card-back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+.phone-card-front {
+    background-color: #282A39;
+
+}
+
+.phone-card-front::after {
     content: '';
     position: absolute;
     height: 50px;
@@ -156,32 +188,47 @@ main {
     background-color: #FFE5F7;
 }
 
-.phone-card-front {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+
+.phone-card-back {
+    background-color: #FFE5F7;
+    color: #282A39;
+    transform: rotateX(-180deg);
+}
+
+.phone-card-back::after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    background-color: #282A39;
 
 }
 
-
-
-.phone-card-balance-side {
+.phone-card-balance-side,
+.phone-card-back-balance-side {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.phone-card-type-side {
+.phone-card-type-side,
+.phone-card-back-type-side {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    height: 100%;
 }
 
-.phone-card-type-side span {
+
+.phone-card-type-side span,
+.phone-card-back-type-side span {
     position: relative;
 }
 
-.phone-card-type-side span::after {
+.phone-card-type-side span::after{
     content: '';
     position: absolute;
     top: -10px;
@@ -192,13 +239,30 @@ main {
     background-color: #FFE5F7;
 }
 
+.phone-card-back-type-side::after{
+    background-color: #282A39;
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    right: 37px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
 #card-number,
-#card-expiry {
+#card-expiry,
+#card-back-number,
+#card-back-expiry {
     font-size: 14px;
 }
 
 #card-expiry {
     color: rgba(255, 255, 255, 0.55);
+}
+
+#card-back-expiry {
+    color: #282A39;
 }
 
 .phone-credit-limits-container {
@@ -681,6 +745,8 @@ main {
 
     .credit-limits {
         width: 40%;
+        height: 75%;
+
     }
 
     .credit-limits span {
@@ -761,17 +827,17 @@ main {
 
 
     .phone-card {
-        height: 23%;
+        height: 26%;
     }
 
     .phone-card-balance-side,
     .phone-card-type-side {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #card-number,
     #card-expiry {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .phone-credit-limits-container {
@@ -779,11 +845,7 @@ main {
     }
 
     .credit-limits {
-        width: 45%;
-    }
-
-    .credit-limits span {
-        font-size: 14px;
+        width: 50%;
     }
 
 
@@ -815,5 +877,107 @@ main {
 @media screen and(min-width:1650px) and(max-width:1800px) {
     .transaction-history ul>li>div {
         width: 45% !important;
+    }
+}
+
+@media screen and (min-width:1330px) and (max-width:1500px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .home-intro h1 {
+        font-size: 50px;
+    }
+
+    .home-intro h3 {
+        font-size: 22px;
+    }
+
+    .home-phone {
+        width: 22%;
+    }
+
+    .home-phone-container nav>div {
+        font-size: 16px;
+    }
+
+    .home-phone-container nav>svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .phone-card {
+        height: 26%;
+    }
+
+    .phone-card-balance-side,
+    .phone-card-type-side {
+        font-size: 16px;
+    }
+
+    #card-number,
+    #card-expiry {
+        font-size: 14px;
+    }
+
+    .phone-credit-limits-container {
+        height: 19%;
+    }
+
+    .credit-limits {
+        width: 45% !important;
+    }
+
+    .credit-limits span {
+        font-size: 14px;
+    }
+
+
+
+    .transaction-history ul>li>div>svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #history {
+        font-size: 16px;
+    }
+
+    .transaction-history ul>li {
+        font-size: 16px;
+    }
+
+    .transaction-type {
+        font-size: 14px;
+    }
+
+    .phone-bottom-nav-container svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (min-width:1350px) and (max-width:1400px) {
+    .transaction-history ul>li>div {
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width:1501px) and (max-width:1800px) {
+    .credit-limits {
+        width: 45% !important;
+        height: 73%;
     }
 }

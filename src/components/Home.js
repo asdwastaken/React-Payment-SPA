@@ -25,6 +25,7 @@ export default function Home() {
                         </svg>
                     </nav>
                     <div className="phone-card">
+                        <div className="flip-card-inner">
                             <div className="phone-card-front">
                                 <div className="phone-card-balance-side">
                                     <span>Balance</span>
@@ -36,17 +37,18 @@ export default function Home() {
                                     <span>VISA</span>
                                 </div>
                             </div>
-                            {/* <div className="phone-card-back">
-                                <div className="phone-card-balance-side">
+                            <div className="phone-card-back">
+                                <div className="phone-card-back-balance-side">
                                     <span>Balance</span>
-                                    <span id="card-number">**** **** **** 2456</span>
+                                    <span id="card-back-number">**** **** **** 2456</span>
                                     <span>$30,836</span>
-                                    <span id="card-expiry">06/26</span>
+                                    <span id="card-back-expiry">06/26</span>
                                 </div>
-                                <div className="phone-card-type-side">
+                                <div className="phone-card-back-type-side">
                                     <span>VISA</span>
                                 </div>
-                            </div> */}
+                            </div>
+                        </div>
                     </div>
 
                     <div className="phone-credit-limits-container">
