@@ -86,6 +86,14 @@ main {
 }
 
 
+.credit-card-greet{
+    background-image: url('../src/credit-card-animated.gif');
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 .home-container h3 {
@@ -173,7 +181,8 @@ main {
 }
 
 .phone-card-front {
-    background-color: #282A39;
+    background-color: #3d3e4c;
+    /* background-color: #3d3e4c; */
 
 }
 
@@ -191,7 +200,7 @@ main {
 
 .phone-card-back {
     background-color: #FFE5F7;
-    color: #282A39;
+    color: #3d3e4c;
     transform: rotateX(-180deg);
 }
 
@@ -203,7 +212,7 @@ main {
     top: -10px;
     right: -10px;
     border-radius: 50%;
-    background-color: #282A39;
+    background-color: #3d3e4c;
 
 }
 
@@ -240,7 +249,7 @@ main {
 }
 
 .phone-card-back-type-side::after{
-    background-color: #282A39;
+    background-color: #3d3e4c;
     content: '';
     position: absolute;
     bottom: 22px;
@@ -262,7 +271,7 @@ main {
 }
 
 #card-back-expiry {
-    color: #282A39;
+    color: #3d3e4c;
 }
 
 .phone-credit-limits-container {
@@ -357,7 +366,7 @@ main {
     justify-content: space-around;
     align-items: center;
     color: white;
-    background-color: #282A39;
+    background-color: #3d3e4c;
 }
 
 
@@ -937,11 +946,115 @@ main {
     }
 
     .credit-limits {
-        width: 45% !important;
+        width: 42%;
     }
 
     .credit-limits span {
+        font-size: 12px;
+    }
+
+
+
+    .transaction-history ul>li>div>svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #history {
+        font-size: 16px;
+    }
+
+    .transaction-history ul>li {
+        font-size: 16px;
+    }
+
+    .transaction-type {
         font-size: 14px;
+    }
+
+    .phone-bottom-nav-container svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media screen and (min-width:1350px) and (max-width:1400px) {
+    .transaction-history ul>li>div {
+        width: 50% !important;
+    }
+}
+
+@media screen and (min-width:1501px) and (max-width:1800px) {
+    .credit-limits {
+        width: 45% !important;
+        height: 73%;
+    }
+}
+
+
+
+@media screen and (min-width:1200px) and (max-width:1329px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .home-intro h1 {
+        font-size: 50px;
+    }
+
+    .home-intro h3 {
+        font-size: 22px;
+    }
+
+    .home-phone {
+        width: 23%;
+    }
+
+    .home-phone-container nav>div {
+        font-size: 16px;
+    }
+
+    .home-phone-container nav>svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .phone-card {
+        height: 26%;
+    }
+
+    .phone-card-balance-side,
+    .phone-card-type-side {
+        font-size: 16px;
+    }
+
+    #card-number,
+    #card-expiry {
+        font-size: 14px;
+    }
+
+    .phone-credit-limits-container {
+        height: 19%;
+    }
+
+    .credit-limits {
+        width: 45% 
+    }
+
+    .credit-limits span {
+        font-size: 12px;
     }
 
 
