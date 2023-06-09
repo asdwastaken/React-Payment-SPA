@@ -11,7 +11,7 @@ export default function Home() {
             </div>
 
 
-            {/* <div className="home-phone">
+            <div className="home-phone">
                 <div className="home-phone-container">
                     <nav>
                         <div>
@@ -212,11 +212,11 @@ export default function Home() {
 
                 </div>
 
-            </div> */}
-
-            <div className="credit-card-greet">
-               
             </div>
+
+            {/* <div className="credit-card-greet">
+               
+            </div> */}
 
         </div>
     )

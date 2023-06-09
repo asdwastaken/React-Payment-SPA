@@ -113,8 +113,8 @@ main {
 }
 
 .home-phone {
-    height: 80%;
-    width: 20%;
+    height: 460px;
+    width: 270px;
     border: 2px solid white;
     border-radius: 26px;
     position: relative;
@@ -130,7 +130,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    height: 10%;
+    height: 40px;
     width: 100%;
 }
 
@@ -141,8 +141,8 @@ main {
 }
 
 .phone-card {
-    width: 90%;
-    height: 30%;
+    width: 215px;
+    height: 110px;
     border-radius: 12px;
     display: flex;
     justify-content: space-evenly;
@@ -181,8 +181,7 @@ main {
 }
 
 .phone-card-front {
-    background-color: #3d3e4c;
-    /* background-color: #3d3e4c; */
+    background-color: #282A39;
 
 }
 
@@ -200,7 +199,7 @@ main {
 
 .phone-card-back {
     background-color: #FFE5F7;
-    color: #3d3e4c;
+    color: #282A39;
     transform: rotateX(-180deg);
 }
 
@@ -212,7 +211,7 @@ main {
     top: -10px;
     right: -10px;
     border-radius: 50%;
-    background-color: #3d3e4c;
+    background-color: #282A39;
 
 }
 
@@ -249,7 +248,7 @@ main {
 }
 
 .phone-card-back-type-side::after{
-    background-color: #3d3e4c;
+    background-color: #282A39;
     content: '';
     position: absolute;
     bottom: 22px;
@@ -271,20 +270,20 @@ main {
 }
 
 #card-back-expiry {
-    color: #3d3e4c;
+    color: #282A39;
 }
 
 .phone-credit-limits-container {
-    width: 100%;
-    height: 20%;
+    width: 235px;
+    height: 80px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .credit-limits {
-    height: 70%;
-    width: 45%;
+    height: 58px;
+    width: 105px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -300,7 +299,7 @@ main {
 }
 
 .phone-transaction-history-container {
-    height: 32%;
+    height: 135px;
     color: white;
 }
 
@@ -317,7 +316,7 @@ main {
     padding-left: 0;
     margin-bottom: 0;
     overflow-y: scroll;
-    height: 80%;
+    height: 110px;
     padding-bottom: 30px;
 }
 
@@ -355,7 +354,7 @@ main {
 
 
 .phone-bottom-nav-container {
-    height: 10%;
+    height: 45px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1094,3 +1093,5 @@ main {
         height: 73%;
     }
 }
+
+
